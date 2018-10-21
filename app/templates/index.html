@@ -1,0 +1,16 @@
+<html>
+    <head>
+        {% if title %}
+        <title> {{ title }} </title>
+        {% else %}
+        <title> Placeholderfdd title </title>
+        {% endif %}
+    </head>
+    <body>
+       <h1>Hello, {{ user.username }}!</h1>
+       {% for post in posts %}
+         <div>{{ post.author.username }} writes: <b>{{ post.body }}</b></div>
+       {% endfor %}
+    </body>
+</html>
+
